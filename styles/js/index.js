@@ -1,6 +1,7 @@
 $(function () {
    banner();
    goodsList();
+   categories();
   //图片以及小圆点轮播渲染
   function banner() {
     $.ajax({
@@ -34,6 +35,17 @@ $(function () {
           var html1 = template('goodsList',res);
           $('.goodList').html(html1);
         }
+      }
+    })
+  }
+  //获取分类数据
+  function categories() {
+    $.ajax({
+      type:'get',
+      url: 'categories',
+      dataType:'json',
+      success:function (res) {
+        console.log(res);
       }
     })
   }
