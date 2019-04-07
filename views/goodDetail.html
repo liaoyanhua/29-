@@ -22,38 +22,21 @@
     </header>
     <div class="pygviews">
       <div class="mui-scroll-wrapper">
-        <div class="mui-scroll">
-          <!--这里放置真实显示的DOM内容-->
-          <div class="mui-slider">
-            <div class="mui-slider-group mui-slider-loop">
-              <!--支持循环，需要重复图片节点-->
-              <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img
-                    src="../static/images/goods_thnmp.png" /></a></div>
-              <div class="mui-slider-item"><a href="#"><img src="../static/images/goods_thnmp.png" /></a></div>
-              <div class="mui-slider-item"><a href="#"><img src="../static/images/goods_thnmp.png" /></a></div>
-              <div class="mui-slider-item"><a href="#"><img src="../static/images/goods_thnmp.png" /></a></div>
-              <div class="mui-slider-item"><a href="#"><img src="../static/images/goods_thnmp.png" /></a></div>
-              <!--支持循环，需要重复图片节点-->
-              <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img
-                    src="../static/images/goods_thnmp.png" /></a></div>
+        <div class="mui-scroll ">
+          <!--轮播图部分-->
+          <div class="mui-slider ">
+            <div class="mui-slider-group mui-slider-loop bannerlist">
+
             </div>
-            <div class="mui-slider-indicator">
-              <div class="mui-indicator mui-active"></div>
-              <div class="mui-indicator"></div>
-              <div class="mui-indicator"></div>
-              <div class="mui-indicator"></div>
+            <div class="mui-slider-indicator indilist">
+
             </div>
           </div>
+          <!-- 商品描述 -->
           <div class="goodsdesc">
-            <div class="tx">华为 麦芒5 4GB+64GB 全网通4G手机高配版 （香槟金）</div>
-            <h3>￥179.00</h3>
-            <ul>
-              <li><span>已选</span><span>白色</span></li>
-              <li><span>已选</span><span>白色</span></li>
-              <li><span>已选</span><span>白色</span></li>
-              <li><span>已选</span><span>白色</span></li>
-            </ul>
+            
           </div>
+          <!-- 商品列表详情 -->
           <div class="list">
             <div class="mui-content">
               <div style="padding: 10px 10px;">
@@ -68,23 +51,11 @@
               </div>
               <div>
                 <div id="item1" class="mui-control-content mui-active">
-                  <ul>
-                    <li>qqqqqq</li>
-                  </ul>
+                  
                 </div>
                 <div id="item2" class="mui-control-content circlparam">
-                  <div class="text">
-                    <div class="one">主体</div>
-                    <div class="two"><span>颜色</span><span>金色</span></div>
-                  </div>
-                  <div class="text">
-                    <div class="one">外观</div>
-                    <div class="two"><span>颜色</span><span>金色</span></div>
-                  </div>
-                  <div class="text">
-                    <div class="one">系统</div>
-                    <div class="two"><span>颜色</span><span>金色</span></div>
-                  </div>
+                  
+                  
                 </div>
               </div>
             </div>
@@ -113,8 +84,50 @@
     </div>
   </div>
 </body>
-
-
+<!-- 渲染轮播图 -->
+<script type='text/template' id='bannerTemp'>
+  <!--支持循环，需要重复图片节点-->
+       <div class="mui-slider-item mui-slider-item-duplicate"><a
+           href="goodDetail.html?pics_id={{pics[pics.length-1].pics_id}}"><img
+             src="{{pics[pics.length-1].pics_mid_url}}" /></a></div>
+             {{each pics value index}}
+       <div class="mui-slider-item"><a href="goodDetail.html?pics_id={{value.pics_id}}"><img
+             src="{{value.pics_mid_url}}" /></a></div>
+       {{/each}}
+       <!--支持循环，需要重复图片节点-->
+       <div class="mui-slider-item mui-slider-item-duplicate"><a href="goodDetail.html?pics_id={{pics[0].pics_id}}"><img
+             src="{{pics[0].pics_mid_url}}" /></a></div>   
+</script>
+<!-- 渲染小圆点 -->
+<script type='text/template' id='indiTemp'>
+  {{each pics value index}}
+       <div class="mui-indicator {{index==0?'mui-active':''}}"></div>
+       {{/each}} 
+</script>
+<!-- 渲染商品文字价格描述 -->
+<script type='text/template' id='textTemp'>
+     <div class="tx">{{goods_name}}</div>
+     <h3>￥{{goods_price}}</h3>
+     <ul>
+       <li><span>已选</span><span>白色</span></li>
+       <li><span>送至</span><span>北京市</span></li>
+       <li><span>已选</span><span>白色</span></li>
+       <li><span>已选</span><span>白色</span></li>
+     </ul>
+</script>
+<!-- 渲染商品详情 -->
+<script type='text/template' id='shopdesc'>
+   {{@goods_introduce}}
+</script>
+<!-- 商品参数渲染 -->
+<script type='text/template' id='attrTemp'>
+  {{each attrs value index}}
+  <div class="text">
+    <div class="one">{{value.attr_name.split('-')[0]}}</div>
+    <div class="two"><span>{{value.attr_name.split('-')[1]}}</span><span>{{value.attr_value}}&nbsp;&nbsp;{{value.attr_vals}}</span></div>
+  </div>
+  {{/each}}
+</script>
 <script src='../lib/zepto/zepto.js'></script>
 <script src='../lib/mui/js/mui.min.js'></script>
 <script src='../lib/arttemplate/template-web.js'></script>
