@@ -31,5 +31,39 @@ $('.mui-icon-search').on('tap',function () {
       }
     }
   });
+
+var data={
+  cid: getParam(location.search).cid,
+  pagenum:1,
+  pagesize:10
+}
+render();
+  function render() {
+    console.log(data);
+    $.ajax({
+      type:'get',
+      url: 'goods/search',
+      data:data,
+      dataType:'json',
+      success:function (res) {
+        console.log(res);
+        var html=template('goodsTemp',res.data);
+        // console.log(html);
+        $('.content ul').html(html);
+      }
+    })
+  }
+  function getParam(url) {
+    var obj={};
+    url=url.substring(1);
+    var arr=url.split('&');
+    for(var i=0;i<arr.length;i++){
+      var temp=arr[i].split('=');
+      console.log(temp)
+      obj[temp[0]]=temp[1];
+      console.log(temp);
+    }
+    return obj;
+  }
   
 })

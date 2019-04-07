@@ -122,7 +122,7 @@ ul {
   width: 100%;
   flex: 1;
   display: flex;
-  overflow: scroll;
+  overflow: hidden;
 }
 .layout .pygviews > .left {
   width: 25%;

@@ -1,0 +1,211 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+ol,
+ul {
+  list-style: none;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+}
+.layout {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.layout .pygviews {
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+  margin-top: 45px;
+  position: relative;
+}
+.layout .pygviews .goodsdesc {
+  padding: 10px;
+}
+.layout .pygviews .goodsdesc > .tx {
+  margin-bottom: 10px;
+}
+.layout .pygviews .goodsdesc > h3 {
+  color: orange;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.layout .pygviews .goodsdesc > ul > li {
+  border-bottom: 1px solid #333;
+  line-height: 40px;
+  display: flex;
+}
+.layout .pygviews .goodsdesc > ul > li span:nth-of-type(1) {
+  font-size: 12px;
+  flex: 1;
+  color: #aaa;
+}
+.layout .pygviews .goodsdesc > ul > li span:nth-of-type(2) {
+  font-size: 15px;
+  flex: 4;
+}
+.layout .pygviews .list #item1,
+.layout .pygviews .list #item2 {
+  background: #ccc;
+  margin: 0 8px;
+}
+.layout .pygviews .list .circlparam .text {
+  padding: 8px 0;
+}
+.layout .pygviews .list .circlparam .text div {
+  padding: 0 8px;
+  line-height: 28px;
+  font-size: 14px;
+}
+.layout .pygviews .list .circlparam .text .two {
+  display: flex;
+}
+.layout .pygviews .list .circlparam .text .two > span:nth-of-type(1) {
+  flex: 1;
+}
+.layout .pygviews .list .circlparam .text .two > span:nth-of-type(2) {
+  flex: 2;
+}
+.layout .pygviews .list .circlparam .text .one {
+  border-bottom: 1px solid #333;
+  font-size: 18px;
+}
+.layout > .footer {
+  width: 100%;
+  height: 50px;
+}
+.layout > .footer a:nth-of-type(3) {
+  background: #992525;
+  position: relative;
+}
+.layout > .footer a:nth-of-type(3) input {
+  background: #992525;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  color: #fff;
+  font-size: 15px;
+  padding: 0;
+  position: absolute;
+  left: -1%;
+  top: 5%;
+}
+.layout > .footer a:nth-of-type(4) {
+  background: #e6c638;
+  position: relative;
+}
+.layout > .footer a:nth-of-type(4) input {
+  background: #e6c638;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  color: #fff;
+  font-size: 15px;
+  padding: 0;
+  position: absolute;
+  left: -1%;
+  top: 5%;
+}
+.layout > .footer .fa {
+  font-size: 19px;
+}
+.layout > .footer span:nth-of-type(1) {
+  margin-bottom: 5px;
+}

@@ -139,6 +139,7 @@ $(function () {
         // $('body').removeClass('loadding')
         // 使用iscroll实现滑动效果
         var iscroll = new IScroll('.right')
+        // console.log(123)
       }
     })
   }

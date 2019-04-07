@@ -11,9 +11,10 @@
   <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
   <link rel="stylesheet" href="../styles/css/goodList.css">
 </head>
+
 <body>
   <div class="layout">
-        
+
     <div class="pygviews">
       <!-- 侧滑导航根容器 -->
       <div class="mui-off-canvas-wrap mui-draggable">
@@ -29,120 +30,22 @@
         <!-- 主页面容器 -->
         <div class="mui-inner-wrap">
           <!-- 主页面标题 -->
-           <header id="header" class="mui-bar mui-bar-nav header">
-             <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-             <h1 class="mui-title">搜索</h1>
-             <a class="mui-icon mui-icon-search mui-pull-right" href="javascript:;"></a>
-           </header>
-          <div  id='refreshContainer' class="mui-content mui-scroll-wrapper">
+          <header id="header" class="mui-bar mui-bar-nav header">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+            <h1 class="mui-title">搜索</h1>
+            <a class="mui-icon mui-icon-search mui-pull-right" href="javascript:;"></a>
+          </header>
+          <div id='refreshContainer' class="mui-content mui-scroll-wrapper content">
             <div class="mui-scroll">
               <ul>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
-                <li>aa</li>
+              
+             
               </ul>
             </div>
           </div>
         </div>
       </div>
-     
+
     </div>
     <div class="footer">
       <nav class="mui-bar mui-bar-tab">
@@ -150,7 +53,7 @@
           <span class="mui-icon mui-icon-home"></span>
           <span class="mui-tab-label">首页</span>
         </a>
-        <a class="mui-tab-item mui-active" href="./category.html">
+        <a class="mui-tab-item" href="./category.html">
           <span class="mui-icon mui-icon-list"></span>
           <span class="mui-tab-label">分类</span>
         </a>
@@ -166,6 +69,16 @@
     </div>
   </div>
 </body>
+<script type='text/template' id='goodsTemp'>
+{{each goods value index}}
+  <li><a href="goodDetail.html?goods_id={{value.goods_id}}">
+      <span><img src="{{value.goods_small_logo}}" alt=""></span>
+      <span class="mui-ellipsis-2">{{value.goods_name}}</span>
+      <span></span>
+      <span>￥{{value.goods_price}}</span>
+    </a></li>
+{{/each}}
+</script>
 <script src='../lib/zepto/zepto.js'></script>
 <script src='../lib/mui/js/mui.min.js'></script>
 <script src='../lib/arttemplate/template-web.js'></script>
