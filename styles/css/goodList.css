@@ -107,7 +107,7 @@ ul {
   flex-direction: column;
 }
 .layout .header {
-  background: #0049ff;
+  background: orangered;
 }
 .layout .header h1 {
   color: #fff;
@@ -150,6 +150,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  color: #333;
 }
 .layout .pygviews .content ul > li > a > span {
   width: 50%;
@@ -164,6 +165,30 @@ ul {
 }
 .layout .pygviews .mui-bar-nav ~ .mui-content {
   padding-top: 0px;
+}
+.layout .pygviews .cebian {
+  background: #fff;
+}
+.layout .pygviews .cebian form {
+  background: #0049ff;
+}
+.layout .pygviews .cebian input[type='search'] {
+  width: 70%;
+  background: #fff;
+  border: 1px solid #0049ff;
+  margin: 8px 8px;
+  box-sizing: border-box;
+}
+.layout .pygviews .cebian input[type='button'] {
+  margin-top: 10px;
+}
+.layout .pygviews .cebian .mui-scroll-wrapper {
+  margin-top: 6px;
+}
+.layout .pygviews .cebian .searchlist .goodsearch {
+  display: inline-block;
+  width: 100%;
+  margin-top: 10px;
 }
 .layout .footer {
   width: 100%;

@@ -1,62 +1,76 @@
 @import './reset.less';
-.layout{
-   width: 100vw;
-   height: 100vh;
-   background-color: #eee;
-   display: flex;
-   flex-direction: column;
-   .header{
-     background: #0049ff;
-     h1{
-       color:#fff;
-       font-size:20px;
-       font-weight: bold;
-     }
-     a{
-       color:#fff;
-       font-size:32px;
-       padding:4px;
-       font-weight: bold;
-     }
-     .mui-bar-nav.mui-bar .mui-icon{
-       padding:0;
-     }
-   }
-   .pygviews {
-     width: 100%;
-     flex: 1;
+
+.layout {
+  width: 100vw;
+  height: 100vh;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    background: orangered;
+
+    h1 {
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    a {
+      color: #fff;
+      font-size: 32px;
+      padding: 4px;
+      font-weight: bold;
+    }
+
+    .mui-bar-nav.mui-bar .mui-icon {
+      padding: 0;
+    }
+  }
+
+  .pygviews {
+    width: 100%;
+    flex: 1;
     //  margin-top:44px;
-     display: flex;
-     flex-direction: column;
-     overflow: hidden;
-     position: relative;
-     .content{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+
+    .content {
       width: 100%;
+
       //  background: #fff;
-      ul{
+      ul {
         width: 100%;
-        >li{
+
+        >li {
           width: 100%;
           background-color: #fff;
-          margin-bottom:10px;
-          padding:15px 10px;
-          >a{
+          margin-bottom: 10px;
+          padding: 15px 10px;
+
+          >a {
             display: inline-block;
             width: 100%;
             height: 100%;
             display: flex;
             flex-wrap: wrap;
             align-items: flex-start;
+            color: #333;
+
             // position: relative;
-            >span{
+            >span {
               width: 50%;
+
               // padding:15px 10px;
-              >img{
+              >img {
                 width: 100%;
                 height: 100%;
                 display: block;
               }
             }
+
             // >span:nth-of-type(3){
             //   position: absolute;
             //   left:49%;
@@ -65,26 +79,62 @@
           }
         }
       }
-     }
-     .mui-scroll-wrapper {
-      top:45px;
-     }
-     .mui-bar-nav~.mui-content{
-       padding-top:0px;
-     }
-     
-   }
-    .footer {
-      width: 100%;
-      height: 50px;
-      background: pink;
+    }
 
-      .fa {
-        font-size: 19px;
+    .mui-scroll-wrapper {
+      top: 45px;
+    }
+
+    .mui-bar-nav~.mui-content {
+      padding-top: 0px;
+    }
+
+    .cebian {
+      background: #fff;
+
+      form {
+        background: #0049ff;
       }
 
-      span:nth-of-type(1) {
-        margin-bottom: 5px;
+      input[type='search'] {
+        width: 70%;
+        background: #fff;
+        border: 1px solid #0049ff;
+        margin: 8px 8px;
+        box-sizing: border-box;
+      }
+
+      input[type='button'] {
+        margin-top: 10px;
+      }
+
+      .mui-scroll-wrapper {
+        margin-top: 6px;
+      }
+
+      .searchlist {
+        .goodsearch {
+          display: inline-block;
+          width: 100%;
+          margin-top: 10px;
+        }
       }
     }
+
+
+  }
+
+  .footer {
+    width: 100%;
+    height: 50px;
+    background: pink;
+
+    .fa {
+      font-size: 19px;
+    }
+
+    span:nth-of-type(1) {
+      margin-bottom: 5px;
+    }
+  }
 }

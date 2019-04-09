@@ -14,16 +14,16 @@
 
 <body>
   <div class="layout">
-
     <div class="pygviews">
       <!-- 侧滑导航根容器 -->
       <div class="mui-off-canvas-wrap mui-draggable">
         <!-- 菜单容器 -->
-        <aside class="mui-off-canvas-right">
+        <aside class="mui-off-canvas-right cebian">
+          <form action="submit">
+            <input type="search" placeholder="请输入你想要的商品名称" id=""><input type="button" value="搜索">
+          </form>
           <div class="mui-scroll-wrapper">
-            <div class="mui-scroll">
-              菜单具体展示内容
-              ...
+            <div class="mui-scroll searchlist">
             </div>
           </div>
         </aside>
@@ -69,6 +69,11 @@
     </div>
   </div>
 </body>
+<script type="text/template" id='searchListTemp'>
+  {{each goods value index}}
+            <a href="./goodDetail.html?goods_id={{value.goods_id}}" class="mui-ellipsis goodsearch">{{value.goods_name}}</a>
+        {{/each}}
+    </script>
 <script type='text/template' id='goodsTemp'>
 {{each goods value index}}
   <li><a href="goodDetail.html?goods_id={{value.goods_id}}">

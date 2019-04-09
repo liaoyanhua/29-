@@ -109,7 +109,7 @@
         <div class="pro">
             {{each value.goods v i}}
             <div class="pros">
-                <a href="javascript:;">
+                <a href="./views/goodDetail.html?goods_id={{v.goods_id}}">
                     <img src="{{v.goods_small_logo}}" alt="">
                     <div class='text mui-ellipsis-2'>{{v.goods_name}}</div>
                     <div class="price">￥{{v.goods_price}}</div>
