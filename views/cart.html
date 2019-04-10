@@ -8,6 +8,8 @@
   <title>品优购购物车页面</title>
   <link rel="stylesheet" href="../lib/mui/css/mui.css">
   <link rel="stylesheet" href="../lib/mui/fonts/mui.ttf">
+  <link rel="stylesheet" href="../lib/mui/css/mui.picker.css">
+  <link rel="stylesheet" href="../lib/mui/css/mui.poppicker.css">
   <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
   <link rel="stylesheet" href="../styles/css/cart.css">
 </head>
@@ -27,19 +29,21 @@
             <div class="send">
               <div>配送地址</div>
               <div class="sendbottom">
-                <div class="mui-icon mui-icon-location"></div>
+                <div class="mui-icon mui-icon-location btnAddress" id="showCityPicker"></div>
+                
                 <div class="text">
                   <div>默认地址</div>
-                  <div>中国台湾钓鱼岛</div>
+                  <div class='address'>中国台湾钓鱼岛</div>
                 </div>
               </div>
+             
             </div>
             <div class="price">
               <div>总价</div>
               <div class="priceP">
                 <span>总价：</span><span>￥30304</span>
-                <button
-                  class="mui-action-back mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-right">生成订单</button>
+                <a
+                  class=" mui-pull-right orderAdd" href="javascript:;">生成订单</a>
               </div>
             </div>
             <div class="order">
@@ -125,9 +129,12 @@
 </script>
 <script src='../lib/zepto/zepto.js'></script>
 <script src='../lib/mui/js/mui.min.js'></script>
+<script src='../lib/mui/js/mui.picker.js'></script>
+<script src='../lib/mui/js/mui.poppicker.js'></script>
 <script src='../lib/arttemplate/template-web.js'></script>
 <script src='../lib/iscroll/iscroll.js'></script>
 <script src='../styles/js/common.js'></script>
+<script src='../lib/data/city.data.js'></script>
 <script src='../styles/js/cart.js'></script>
 
 </html>

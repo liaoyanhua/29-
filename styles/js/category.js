@@ -143,4 +143,32 @@ $(function () {
       }
     })
   }
+  function login(urls) {
+     var mytoken = sessionStorage.getItem('pyg_token');
+     if (!mytoken) {
+       console.log(123);
+       location.href = './login.html?redirectUrl=' + location.href;
+     } else {
+       $.ajax({
+         type: 'get',
+         url: 'my/cart/all',
+         dataType: 'json',
+         success: function (res) {
+           console.log(res);
+           if (res.meta.status == 401) {
+             location.href = './login.html?redirectUrl=' + location.href;
+           } else {
+             console.log('ok');
+             location.href = `./${urls}.html`;
+           }
+         }
+       })
+     }
+  }
+  $('.cart').on('tap',function () {
+   login('cart');
+  })
+  $('.my').on('tap',function () {
+    login('my');
+  })
 })

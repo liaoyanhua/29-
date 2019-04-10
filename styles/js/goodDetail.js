@@ -64,7 +64,7 @@ var info={
          $.ajax({
            type: 'post',
            url: 'my/cart/add',
-           data: info,
+           data: {info: JSON.stringify(info)},
            dataType: 'json',
            success: function (res) {
              console.log(res);
@@ -72,7 +72,7 @@ var info={
                location.href='./login.html?redirectUrl='+location.href;
              }else{
                console.log('ok');  
-               mui.confirm('添加成功，是否查看购物车？','温馨提示',['跳转','取消'],function (e) {
+               mui.confirm('添加成功，是否查看购物车？','温馨提示',['是的','取消'],function (e) {
                  if(e.index==0){
                    location.href='cart.html';
                  }else{

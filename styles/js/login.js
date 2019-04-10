@@ -33,15 +33,25 @@ $('.mui-btn-primary').on('tap',function () {
       if(res.meta.status==200){
         //登录成功将获取到token值进行本地存储，
         sessionStorage.setItem('pyg_token',res.data.token);
+        console.log(typeof (res.data.token));
         //进行页面跳转，跳回用户之前所在的页面，
         var re = location.search.substring(13);
         console.log(re);
-        location.href=re;
+        if(!re){
+         location.href='../index.html'
+        }else{
+ location.href = re;
+        }
+        
       }else{
         mui.toast(res.meta.msg)
       }
     }
   })
-
+ 
 }) 
+$('.btnregister').on('tap', function () {
+  console.log(123);
+  location.href = "./register.html";
+})
 })
