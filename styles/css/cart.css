@@ -1,0 +1,221 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+ol,
+ul {
+  list-style: none;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+}
+.layout {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.layout #header {
+  width: 100%;
+  height: 50px;
+}
+.layout .pygviews {
+  width: 100%;
+  position: relative;
+  flex: 1;
+}
+.layout .pygviews .list {
+  padding: 10px;
+}
+.layout .pygviews .list .send {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.layout .pygviews .list .send > div:nth-of-type(1) {
+  font-size: 13px;
+  color: #333;
+}
+.layout .pygviews .list .send > div:nth-of-type(2) {
+  margin-top: 3px;
+  padding: 10px;
+  background: #fff;
+  display: flex;
+}
+.layout .pygviews .list .send > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 15%;
+  font-size: 30px;
+  color: #000;
+  text-align: center;
+  line-height: 40px;
+}
+.layout .pygviews .list .send > div:nth-of-type(2) > div:nth-of-type(2) {
+  flex: 1;
+}
+.layout .pygviews .list .send > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #333;
+}
+.layout .pygviews .list .price {
+  margin-bottom: 20px;
+}
+.layout .pygviews .list .price > div:nth-of-type(1) {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+.layout .pygviews .list .price .priceP {
+  padding: 10px;
+  background: #fff;
+}
+.layout .pygviews .list .price .priceP span:nth-of-type(2) {
+  color: red;
+  font-weight: bold;
+}
+.layout .pygviews .list .order {
+  display: flex;
+  flex-direction: column;
+}
+.layout .pygviews .list .order > div:nth-of-type(1) {
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.layout .pygviews .list .order .orderlist .orderone {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.layout .pygviews .list .order .orderlist .orderone > div:nth-of-type(1) {
+  padding-top: 20px;
+  flex: 1;
+}
+.layout .pygviews .list .order .orderlist .orderone > div:nth-of-type(1).mui-checkbox input[type='checkbox'] {
+  top: 42%;
+}
+.layout .pygviews .list .order .orderlist .orderone .pic {
+  flex: 2;
+  padding-top: 15px;
+}
+.layout .pygviews .list .order .orderlist .orderone .pic img {
+  width: 86%;
+  display: block;
+}
+.layout .pygviews .list .order .orderlist .orderone .tex {
+  padding: 5px 0;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.layout .pygviews .list .order .orderlist .orderone .tex > div:nth-of-type(1) {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+.layout .pygviews .list .order .orderlist .orderone .tex .pri {
+  margin-top: 5px;
+}
+.layout .footer {
+  width: 100%;
+  height: 50px;
+}
+.buttonToggle .pygdel,
+.buttonToggle .pyg_userNum,
+.buttonToggle .box {
+  display: none;
+}

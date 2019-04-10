@@ -71,7 +71,14 @@ var info={
              if(res.meta.status==401){
                location.href='./login.html?redirectUrl='+location.href;
              }else{
-               console.log('ok'); 
+               console.log('ok');  
+               mui.confirm('添加成功，是否查看购物车？','温馨提示',['跳转','取消'],function (e) {
+                 if(e.index==0){
+                   location.href='cart.html';
+                 }else{
+                   
+                 }
+               })
              }
            }
          })
